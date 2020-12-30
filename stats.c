@@ -31,7 +31,7 @@
 
 void main() {
 
-  int i;
+  
   unsigned char test[SIZE] = { 34, 201, 190, 154,   8, 194,   2,   6,
                               114, 88,   45,  76, 123,  87,  25,  23,
                               200, 122, 150, 90,   92,  87, 177, 244,
@@ -40,41 +40,102 @@ void main() {
   
 
   /* Other Variable Declarations Go Here */
-
+  int med,mean,max,min;
   /* Statistics and Printing Functions Go Here */
- 
+  printf("Unsorted Array:\n");
+  print_array(test,SIZE);
+
+  printf("Sorted Array (largest to smallest):\n");
+  sort_array(test,SIZE);
+  print_array(test,SIZE);
+  
+  med=find_median(test,SIZE);
+  mean=find_mean(test,SIZE);
+  max=find_maximum(test,SIZE);
+  min=find_minimum(test,SIZE);
+
+  print_statistics(min, max, mean, med);
 }
 
 /* Add other Implementation File Code Here */
   
 void print_array(unsigned char *arr, int size)
 {
-  
+  int i;
+  for(i=0; i<size; i++)
+  {
+  	printf("%d ",*arr);
+  	arr++;
+  }
+  printf("\n\n");
 }
 
 int find_median(unsigned char *arr, int size)
 { 
-  
+  int mid,mid_next;
+  mid=(size/2)-1;
+  mid_next=mid+1;
+  return (arr[mid]+arr[mid_next])/2;
 }
 
 int find_mean(unsigned char *arr, int size)
 {
-  
+  int i,total=0,ave;
+  for(i=0; i<size; i++)
+  {
+  	total+=*arr;
+  	arr++;
+  }
+  return total/size;
 }
 
 int find_maximum(unsigned char *arr, int size)
 {
-  
+  int i,max=0;
+  for(i=0; i<size; i++)
+  {
+  	if(*arr>max)
+  		{max=*arr;}
+  arr++;
+  }
+  return max;
 }
 
 int find_minimum(unsigned char *arr, int size)
 {
-  
+  int i, min=*arr;
+  for(i=0; i<size; i++)
+  {
+  	if(*arr<min)
+  		{min=*arr;}
+  arr++;
+  }
+  return min;
 }
 
 void sort_array(unsigned char *arr, int size)
 {
-  
+  int i,y,max_i,max=0;
+  for(y=0; y<size; y++)
+	{
+  	for(i=y; i<size; i++)
+  	{  if(arr[i]>max)
+     	 {	max=arr[i];
+    	 		max_i=i;
+			 }    
+		} 
+	arr[max_i]=arr[y];
+	arr[y]=max;
+	max=0;	
+	}
+}
+
+void print_statistics(int min, int max, int mean, int med)
+{  
+  printf("The minimum: %d\n\n", min);
+  printf("The maximum: %d\n\n", max);
+  printf("The mean: %d\n\n", mean);
+  printf("The median after sorthing: %d\n\n", med);
 }
 	
 
