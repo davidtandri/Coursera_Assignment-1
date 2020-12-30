@@ -9,13 +9,15 @@
  *
  *****************************************************************************/
 /**
- * @file <Add File Name> 
- * @brief <Add Brief Description Here >
+ * @file stats.c 
+ * @brief Basic statistic calculator
  *
- * <Add Extended Description Here>
+ * This program can perform basic operation such as
+ * finding minimum, finding maximum, calculating mean,
+ * calculating median and rearranging the data from the highest to lowest
  *
- * @author <Add FirsName LastName>
- * @date <Add date >
+ * @author David Tandri
+ * @date 30/12/2020
  *
  */
 
@@ -29,15 +31,53 @@
 
 void main() {
 
+  int i;
   unsigned char test[SIZE] = { 34, 201, 190, 154,   8, 194,   2,   6,
                               114, 88,   45,  76, 123,  87,  25,  23,
                               200, 122, 150, 90,   92,  87, 177, 244,
                               201,   6,  12,  60,   8,   2,   5,  67,
                                 7,  87, 250, 230,  99,   3, 100,  90};
+  
 
   /* Other Variable Declarations Go Here */
-  /* Statistics and Printing Functions Go Here */
 
+  /* Statistics and Printing Functions Go Here */
+ 
 }
 
 /* Add other Implementation File Code Here */
+  
+void print_array(unsigned char *arr, int size)
+{
+  
+}
+
+int find_median(unsigned char *arr, int size)
+{ 
+  
+}
+
+int find_mean(unsigned char *arr, int size)
+{
+  
+}
+
+int find_maximum(unsigned char *arr, int size)
+{
+  
+}
+
+int find_minimum(unsigned char *arr, int size)
+{
+  
+}
+
+void sort_array(unsigned char *arr, int size)
+{
+  
+}
+	
+
+
+
+

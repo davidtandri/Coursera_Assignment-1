@@ -9,31 +9,47 @@
  *
  *****************************************************************************/
 /**
- * @file <Add File Name> 
- * @brief <Add Brief Description Here >
+ * @file stats.h 
+ * @brief Coursera Course: Week 1 Assignment 1
  *
- * <Add Extended Description Here>
+ * Function Declaration 
  *
- * @author <Add FirsName LastName>
- * @date <Add date >
+ * @author David Tandri
+ * @date 30/12/2020
  *
  */
 #ifndef __STATS_H__
 #define __STATS_H__
 
 /* Add Your Declarations and Function Comments here */ 
+void print_array(unsigned char *arr, int size);
+
+int find_median(unsigned char *arr, int size);
+
+int find_mean(unsigned char *arr, int size);
+
+int find_maximum(unsigned char *arr, int size);
+
+int find_minimum(unsigned char *arr, int size);
+
+void sort_array(unsigned char *arr, int size);
+
+void print_statistics(int min, int max, int mean, int med);
 
 /**
- * @brief <Add Brief Description of Function Here>
+ * @brief Statistic Calculator
  *
- * <Add Extended Description Here>
+ * These functions take in array data and its corresponding size.
+ * The function will return the minimum, maximum, mean and median of the array accordingly
  *
- * @param <Add InputName> <add description here>
- * @param <Add InputName> <add description here>
- * @param <Add InputName> <add description here>
- * @param <Add InputName> <add description here>
+ * @param *arr Statistical data to be performed
+ * @param size Length of data to be operated by the required function
+ * @param min  Displaying the smallest data
+ * @param max  Displaying the biggest data
+ * @param mean Displaying the average of total data
+ * @param med  Displaying the median of total data
  *
- * @return <Add Return Informaiton here>
+ * @return Minimum, Maximum, Mean and Median
  */
 
 
